@@ -1,7 +1,7 @@
 public class JogoV1 {
     
     public static void main(String[] args){
-        var p = new Personagem();
+        var p = new Personagem(4, 4, 4);
 
         p.nome = "Rodolfo";
 

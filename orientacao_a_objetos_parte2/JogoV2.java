@@ -2,22 +2,14 @@ import java.util.Random;
 
 public class JogoV2 {
     public static void main(String[] args) throws Exception{
-        var p = new Personagem();
-        var p2 = new Personagem();
-        var p3 = new Personagem();
+        var p = new Personagem(4, 4, 4);
+        var p2 = new Personagem(1, 2, 10);
+        var p3 = new Personagem(2, 10, 4);
         var gerador = new Random();
 
         p.nome = "Gamal";
         p2.nome = "Soneca";
         p3.nome = "Comilao";
-
-        p2.sono = 10;
-        p2.energia = 1;
-        p2.fome = 2;
-
-        p2.sono = 4;
-        p2.energia = 2;
-        p2.fome = 10;
 
         while(true){
             int oQueFazer = gerador.nextInt(4);

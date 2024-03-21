@@ -4,6 +4,21 @@ public class Personagem {
     int fome = 0;
     int sono = 0;
 
+
+    Personagem(int energia, int fome, int sono){
+        if(energia >= 0 && energia <= 10){
+            this.energia = energia;
+        }
+
+        if(fome >= 0 && fome <= 10){
+            this.fome = fome;
+        }
+
+        if(sono >= 0 && sono <= 10){
+            this.sono = sono;
+        }
+    }
+
     void cacar(){
         if(energia >= 2){
             System.out.printf("%s esta cacando...\n", nome);
