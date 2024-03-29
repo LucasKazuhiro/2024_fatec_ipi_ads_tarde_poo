@@ -59,4 +59,16 @@ public class VetorDinamico {
       // Ajustar o ponteiro 'elementos' para que ele aponte para o novo vetor 'auxiliar'
       elementos = auxiliar;
     }
+
+
+    // Adicionar valores a um vetor
+    void adicionar(int elemento){
+      // Se o vetor estiver cheio, criar um novo vetor redimensionado antes de adicionar novos valores
+      if(estaCheio()){
+        redimensionar();
+      }
+
+      elementos[qtde] = elemento;
+      qtde++;
+    }
 }
