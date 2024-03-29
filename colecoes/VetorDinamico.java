@@ -29,4 +29,16 @@ public class VetorDinamico {
       return elementos;
     }
 
+
+
+
+    // Verificar se o vetor está cheio
+    boolean estaCheio(){
+      if(qtde == cap){
+        return true;
+      }
+      else{
+        return false;
+      }
+    }
 }
