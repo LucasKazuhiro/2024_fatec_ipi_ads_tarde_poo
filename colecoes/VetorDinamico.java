@@ -24,5 +24,9 @@ public class VetorDinamico {
     }
 
 
+    // Getter's do array 'elementos'
+    int[] getElementos(){
+      return elementos;
+    }
 
 }
