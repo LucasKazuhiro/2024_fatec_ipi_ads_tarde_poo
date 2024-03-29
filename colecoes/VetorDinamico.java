@@ -19,6 +19,8 @@ public class VetorDinamico {
             aux /= 2;
         }
         cap = aux == 1 && capMinima > 3 ? capMinima : CAP_MINIMA;
+        qtde = 0;
+        elementos = new int[cap];
     }
 
 
