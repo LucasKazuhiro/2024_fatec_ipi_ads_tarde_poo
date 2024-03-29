@@ -41,4 +41,22 @@ public class VetorDinamico {
         return false;
       }
     }
+
+
+    // Redimensionar o vetor para ele esteja cheio. Sua capacidade dobrará!
+    void redimensionar(){
+      // Alocar um vetor com o dobro da capacidade atual chamado 'auxiliar'
+      int[] auxiliar = new int[cap*2];
+      cap *= 2;
+
+      // Copiar todo mundo do vetor 'elementos' para o vetor 'auxiliar'
+      int i=0;
+      for(int valor : elementos){
+        auxiliar[i] = valor;
+        i++;
+      }
+      
+      // Ajustar o ponteiro 'elementos' para que ele aponte para o novo vetor 'auxiliar'
+      elementos = auxiliar;
+    }
 }
