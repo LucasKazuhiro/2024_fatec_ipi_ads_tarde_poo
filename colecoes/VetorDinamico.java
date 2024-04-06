@@ -125,4 +125,28 @@ public class VetorDinamico {
         }
       } 
     }
+
+
+
+
+
+
+
+
+
+    // Imprimir resultados na tela
+    public String toString(){
+      StringBuilder sb = new StringBuilder("");
+
+      sb.append("Qtde: ").append(qtde);
+      sb.append("\n");
+      sb.append("Cap: ").append(cap);
+      sb.append("\n");
+      sb.append(qtde > 0 ? "Elementos: " : "");
+      for(int i=0; i<qtde; i++){
+        sb.append(elementos[i]).append(" ");
+      }
+
+      return sb.toString();
+    }
 }
