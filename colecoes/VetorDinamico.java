@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class VetorDinamico {
     // Variáveis de instância (cada instância ou objeto tem a sua cópia)
     private int qtde;
@@ -7,6 +9,8 @@ public class VetorDinamico {
     // Variável de classe (todas as instâncias compartilham este mesmo valor)
     public static final int CAP_MINIMA = 4;
 
+
+    // Construtores (com e sem parametros)
     VetorDinamico(){
         cap = CAP_MINIMA;
         qtde = 0;
@@ -24,10 +28,12 @@ public class VetorDinamico {
     }
 
 
-    // Getter's do array 'elementos'
+    // Getter do array 'elementos'
     int[] getElementos(){
-      return elementos;
+      return Arrays.copyOf(elementos, qtde);
     }
+
+
 
 
 
@@ -41,7 +47,6 @@ public class VetorDinamico {
         return false;
       }
     }
-
 
     // Redimensionar o vetor para ele esteja cheio. Sua capacidade dobrará!
     void redimensionar(){
@@ -59,7 +64,6 @@ public class VetorDinamico {
       // Ajustar o ponteiro 'elementos' para que ele aponte para o novo vetor 'auxiliar'
       elementos = auxiliar;
     }
-
 
     // Adicionar valores a um vetor
     void adicionar(int elemento){
