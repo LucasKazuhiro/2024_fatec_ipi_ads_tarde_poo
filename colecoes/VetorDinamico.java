@@ -70,4 +70,30 @@ public class VetorDinamico {
       elementos[qtde] = elemento;
       qtde++;
     }
+
+
+
+
+
+
+
+    // Mega Sena
+    void adicinarSemRepeticao(int e){
+      if(!existe(e)){
+        adicionar(e);
+      }
+    }
+
+    boolean existe(int e){
+      for(int i=0; i<qtde; i++){
+        if(e == elementos[i]){
+          return true;
+        }
+      }
+      return false;
+    }
+
+    int tamanho(){
+      return qtde;
+    }
 }
