@@ -96,4 +96,33 @@ public class VetorDinamico {
     int tamanho(){
       return qtde;
     }
+
+
+
+
+
+
+
+    // Remover um elemento no final de 'elementos'
+    void removerNoFinal(){
+      qtde -= 1;
+    }
+
+    boolean estaVazio(){
+      return qtde == 0;
+    }
+
+    boolean estaUmQuartoCheio(){
+      return qtde == (cap / 4);
+    }
+
+    void reduzirTamanho(){
+      if(!estaVazio()){
+        removerNoFinal();
+
+        if(cap>4 && estaUmQuartoCheio()){
+          cap /= 2;
+        }
+      } 
+    }
 }
