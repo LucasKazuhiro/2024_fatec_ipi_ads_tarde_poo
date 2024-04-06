@@ -40,12 +40,7 @@ public class VetorDinamico {
 
     // Verificar se o vetor está cheio
     boolean estaCheio(){
-      if(qtde == cap){
-        return true;
-      }
-      else{
-        return false;
-      }
+      return qtde == cap;
     }
 
     // Redimensionar o vetor para ele esteja cheio. Sua capacidade dobrará!
