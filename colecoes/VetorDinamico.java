@@ -1,10 +1,10 @@
 import java.util.Arrays;
 
-public class VetorDinamico {
+public class VetorDinamico <Tipo>{
     // Variáveis de instância (cada instância ou objeto tem a sua cópia)
     private int qtde;
     private int cap;
-    private int [] elementos;
+    private Tipo [] elementos;
 
     // Variável de classe (todas as instâncias compartilham este mesmo valor)
     public static final int CAP_MINIMA = 4;
@@ -14,7 +14,7 @@ public class VetorDinamico {
     VetorDinamico(){
         cap = CAP_MINIMA;
         qtde = 0;
-        elementos = new int[CAP_MINIMA];
+        elementos = (Tipo[]) new Object[CAP_MINIMA];
     }
 
     VetorDinamico(int capMinima){
@@ -24,12 +24,12 @@ public class VetorDinamico {
         }
         cap = aux == 1 && capMinima > 3 ? capMinima : CAP_MINIMA;
         qtde = 0;
-        elementos = new int[cap];
+        elementos = (Tipo[]) new Object[cap];
     }
 
 
     // Getter do array 'elementos'
-    int[] getElementos(){
+    Tipo[] getElementos(){
       return Arrays.copyOf(elementos, qtde);
     }
 
@@ -46,12 +46,12 @@ public class VetorDinamico {
     // Redimensionar o vetor para ele esteja cheio. Sua capacidade dobrará!
     void redimensionar(){
       // Alocar um vetor com o dobro da capacidade atual chamado 'auxiliar'
-      int[] auxiliar = new int[cap*2];
+      Tipo[] auxiliar = (Tipo[]) new Object[cap*2];
       cap *= 2;
 
       // Copiar todo mundo do vetor 'elementos' para o vetor 'auxiliar'
       int i=0;
-      for(int valor : elementos){
+      for(Tipo valor : elementos){
         auxiliar[i] = valor;
         i++;
       }
@@ -61,7 +61,7 @@ public class VetorDinamico {
     }
 
     // Adicionar valores a um vetor
-    void adicionar(int elemento){
+    void adicionar(Tipo elemento){
       // Se o vetor estiver cheio, criar um novo vetor redimensionado antes de adicionar novos valores
       if(estaCheio()){
         redimensionar();
@@ -78,13 +78,13 @@ public class VetorDinamico {
 
 
     // Mega Sena
-    void adicinarSemRepeticao(int e){
+    void adicinarSemRepeticao(Tipo e){
       if(!existe(e)){
         adicionar(e);
       }
     }
 
-    boolean existe(int e){
+    boolean existe(Tipo e){
       for(int i=0; i<qtde; i++){
         if(e == elementos[i]){
           return true;
