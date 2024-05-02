@@ -53,3 +53,12 @@ UPDATE tb_pessoa SET nome = CONCAT(nome, ' Gomes') WHERE cod_pessoa = 2 OR cod_p
 
 # Deletando dados da table
 DELETE FROM tb_pessoa WHERE cod_pessoa = 4;
+
+
+
+
+
+
+
+# Adicionando coluna do tipo BOOLEAN com valores preenchidos
+ALTER TABLE tb_pessoa ADD ativo BOOLEAN DEFAULT TRUE NOT NULL;
