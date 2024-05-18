@@ -1,0 +1,18 @@
+CREATE TABLE tb_pessoa(
+    cod_pessoa SERIAL PRIMARY KEY,
+    nome VARCHAR(200) NOT NULL,
+    fone VARCHAR(20) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    idade INT NOT NULL
+);
+
+
+INSERT INTO tb_pessoa(nome, fone, email, idade) VALUES
+('Melissa', '43675-2785', 'melissinha@gmail.com', 22),
+('Jailson', '58750-3962', 'tudonosso@gmail.com', 35),
+('Pitolomeu', '69487-2978', 'serounaoser@gmail.com', 12),
+('Jaqueline', '93861-4040', 'colinha@gmail.com', 78);
+
+
+SELECT * FROM tb_pessoa;
+

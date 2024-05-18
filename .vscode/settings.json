@@ -1,0 +1,7 @@
+{
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "crud_pessoas/lib/lombok.jar",
+        "crud_pessoas/lib/postgresql-42.7.3.jar"
+    ]
+}
